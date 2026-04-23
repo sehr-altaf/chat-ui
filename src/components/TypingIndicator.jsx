@@ -8,6 +8,7 @@ export default function TypingIndicator() {
         <span className={styles.dot} />
         <span className={styles.dot} />
         <span className={styles.dot} />
+        <span className={styles.dot}></span>
       </div>
     </div>
   )

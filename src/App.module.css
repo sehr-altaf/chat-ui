@@ -1,0 +1,111 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 680px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Mode selector */
+.modeBar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: #f8f8f8;
+  flex-shrink: 0;
+}
+
+.modeOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  user-select: none;
+}
+
+.modeOption input[type="radio"] { display: none; }
+
+.modeOption:hover { background: #f0f0f0; color: var(--text); }
+
+.modeActive {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: white;
+}
+
+/* Connection overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.overlayText { font-size: 14px; color: var(--text-muted); }
+
+.errorIcon { font-size: 36px; }
+
+.errorText {
+  font-size: 14px;
+  color: #991b1b;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* Ticket suggestion banner */
+.banner {
+  background: #fef3c7;
+  border-top: 1px solid #fbbf24;
+  border-bottom: 1px solid #fbbf24;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #92400e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.banner button {
+  background: #d97706;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.banner button:hover { background: #b45309; }

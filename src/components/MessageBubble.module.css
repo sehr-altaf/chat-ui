@@ -1,0 +1,78 @@
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.user { flex-direction: row-reverse; }
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.avatarUser { background: var(--primary); }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 72%;
+}
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.bubbleBot  {
+  background: #f3f4f6;
+  color: var(--text);
+  border-bottom-left-radius: 4px;
+}
+
+.bubbleUser {
+  background: var(--primary);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.time {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.timeRight { text-align: right; }
+
+.quickReplies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-left: 36px;
+}
+
+.chip {
+  background: white;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.chip:hover { background: var(--primary-light); }
